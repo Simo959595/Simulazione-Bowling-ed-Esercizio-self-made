@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bowling DOM</title>
+    <!-- Bootstrap CSS  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- My CSS  -->
+     <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="display-1 text-center my-5 border-bottom">SALA BOWLING</h1>
+            </div>
+        </div>
+        <div class="row justify-content-evenly my-5">
+            <!-- COLONNA GIOCATORE  -->
+            <div class="col-4">
+                <h2 class="text-center">GIOCATORE</h2>
+                <div class="border rounded p-5 h-100">
+                    <div class="input-group mb-3">
+                        <input id="inputNewPlayer" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <button id="btnNewPlayer" class="btn btn-primary w-100">AGGIUNGI</button>
+                </div>
+            </div>
+            <!-- COLONNA AZIONI  -->
+            <div class="col-4">
+                <h2 class="text-center">GIOCA</h2>
+                <div class="border rounded p-5 h-100 d-flex flex-column justify-content-center">
+                    <button id="btnPlay" class="btn btn-success w-100 my-1 d-none">Gioca Turno</button>
+                    <button id="btnStart" class="btn btn-success w-100 my-1">Inizia Partita</button>
+                    <button id="btnRanking" class="btn btn-danger w-100 my-1 d-none">Classifica</button>
+                    <button id="btnReset" class="btn btn-warning w-100 my-1 d-none">Reset</button>
+                    <button id="btnGreen" class="btn btn-success w-100 my-1 d-none">green mode</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 my-5">
+                <!-- TABELLA PUNTEGGI  -->
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">1</th>
+                        <th scope="col">2</th>
+                        <th scope="col">3</th>
+                        <th scope="col">4</th>
+                        <th scope="col">5</th>
+                        <th scope="col">6</th>
+                        <th scope="col">7</th>
+                        <th scope="col">8</th>
+                        <th scope="col">9</th>
+                        <th scope="col">10</th>
+                        <th scope="col">TOT</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tableWrapper">
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+
+    </header>
+
+
+    <!-- bootstrap JS  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- js dom -->
+    <script src="./giocodelbowling2.js"></script>
+  </body>
+</html>
